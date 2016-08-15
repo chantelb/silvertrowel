@@ -1,0 +1,54 @@
+{
+  "name": "silvertrowel-staging",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_S3_DOMAIN": {
+      "required": true
+    },
+    "AWS_S3_REGION": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "FOG_DIRECTORY": {
+      "required": true
+    },
+    "FOG_PROVIDER": {
+      "required": true
+    },
+    "NEW_RELIC_APP_NAME": {
+      "required": true
+    },
+    "SENTRY_DSN": {
+      "required": true
+    },
+    "SENTRY_SERVER_NAME": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "newrelic",
+    "sendgrid",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+
+  ]
+}
